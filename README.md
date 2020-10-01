@@ -33,10 +33,13 @@ Use s3 and cloudfront to host the static website
 
 # notes
 
-- create a responive client div where a brand square expands to a brand testimonial on hover and displaces other squares accordingly
+items not included at submission/considerations for future improvement:
 
-- mobile:
-    -created single column
-    -top menu to make room for menu
-    -footer simplified (no free trial)
+- a responive client list div where a brand square expands to a brand testimonial on hover and displaces other squares accordingly
+
+- cohesive mobile response styling
+
+-javascript on click tracking
+
+-reorganization of file structure—hugo css compiling error necessitated unconventional reorganization of file structure
 
