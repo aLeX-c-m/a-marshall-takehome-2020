@@ -8,6 +8,7 @@ body {
     'footer';
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    width: 100vw;
 }
 
 main {
@@ -15,14 +16,11 @@ main {
     flex-direction: row;
     @media screen and (max-width: $small) {
         flex-direction: column;
+        width: 100vw;
      }
 }
 
-h3 {
-    @media screen and (max-width: $small) {
-        font-size: 16px;
-    }
-}
+
 
 
 .menu {
@@ -38,8 +36,9 @@ h3 {
     padding-right: 59px;
     @media screen and (max-width: $small) {
         height: 30vh;
-        width: 100%;
+        width: 100vw;
         align-items: center;
+        padding: 0;
      }
 }
 
@@ -50,6 +49,8 @@ h3 {
     color: white;
     @media screen and (max-width: $small) {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -58,6 +59,9 @@ h3 {
     padding-left: 0;
     text-transform: uppercase;
     font-size: 16px;
+    @media screen and (max-width: $small) {
+        font-size: .5rem;
+    }
     font-weight: 500;
 }
 
@@ -74,19 +78,29 @@ a:hover {
     font-size: 13px;
     font-weight: lighter;
     @media screen and (max-width: $small) {
-        padding-top: 0;
+        visibility: hidden;    
     }   
 }
-
-
+.mobile-login {
+    visibility: hidden;
+    @media screen and (max-width: $small) {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        visibility: visible; 
+        font-size: .6rem;
+    }
+}
 
 .main-content {
     grid-area: main;
     display: -ms-inline-grid;
     float: right;
-    margin-left: 30vw;
+    margin-left: 10%;
     @media screen and (max-width: $small) {
-        margin-left: 5vw;
+        margin: auto;
+        padding: 10px;
+        padding-top: 20px;
+        max-width: 100vw;
     }
     padding: 30px;
     padding-top: 38px;
@@ -99,14 +113,16 @@ a:hover {
     display: flex;
     flex-direction: row;
     @media screen and (max-width: $small) {
-        flex-direction: column;
-        
+        flex-direction: column;     
     }
 }
 .main-text {
     width: 361px; 
-    margin: 0;
     margin-right: 30px;
+    @media screen and (max-width: $small) {
+        max-width: 90vw;  
+        margin: 0;
+    }
 }
 
 .main-pricing {
@@ -189,8 +205,9 @@ a:hover {
         cursor: pointer;
     }
     @media screen and (max-width: $small) {
-        width: 300px;
+        width: 90vw;
         padding: 15px;
+        margin: auto;
         margin-bottom: 20px;
     }
 }
@@ -202,6 +219,7 @@ a:hover {
     padding-bottom: 26px;
     @media screen and (max-width: $small) {
         padding-top: 10px;
+        width: 100px;
         padding-bottom: 10px;
     }  
     position: relative;
@@ -210,15 +228,23 @@ a:hover {
 .main-text-sub-description {
     font-weight: lighter;
     @media screen and (max-width: $small) {
-        width: 300px; 
         text-align: center;  
     }
 }
 
 h1 {
     @media screen and (max-width: $small) {
-        font-size: 2rem; 
-        text-align: center;  
+        font-size: 1rem; 
+        text-align: center;
+        width: 100vw;  
+        text-emphasis: bold;
+    }
+}
+
+h3 {
+    @media screen and (max-width: $small) {
+        font-size: .5rem;
+        width: 100vw;  
     }
 }
 
@@ -231,10 +257,15 @@ footer {
     justify-content: center;
     margin-bottom: 0;
     margin-right: 0;
-    width: 100%;
+    width: 100vw;
     display: inline-block;
     height: 300px;
     grid-area: footer;
+    @media screen and (max-width: $small) {
+        height: 100px;
+        align-content: center;
+        width: 100vw;
+    }
 }
 
 .footer-column-title {
@@ -251,6 +282,9 @@ footer {
     color: FFFFFF;
     border: 2px solid #979797;;
     border-radius: 5px;
+    @media screen and (max-width: $small) {
+        visibility: hidden;
+    }
 } 
 
 .terms-privacy-cookies-div {
@@ -262,6 +296,11 @@ footer {
     justify-content: center;
     font-size: 12px;
     grid-area: 'bottom';
+    @media screen and (max-width: $small) {
+        width: 100vw; 
+        align-items: center;
+        margin-top: -30px;
+    }
 }
 
 .terms-privacy-cookies-links {
@@ -270,10 +309,11 @@ footer {
     text-align: center;
     display: inline-block;
     justify-content: space-around;
-    color: FFFFFF;
+    color: white;
     text-decoration: none;
     font-size: 12px;
-    grid-area: 'bottom';
+    grid-area: 'bottom';   
+
 }
 
 .copyright {
@@ -281,6 +321,9 @@ footer {
         font-weight: lighter;
         margin: auto;
         color: B6B6B6;
+        @media screen and (max-width: $small) {
+            visibility: hidden;
+        }
 }
 
 
@@ -289,10 +332,11 @@ footer {
     display: grid;
     height: 80%;
     @media screen and (max-width: $small) {
-        grid-template-columns: 1fr;
-        display: flex;
+        visibility: hidden;  
     }
 }
+
+
 
 .footer-quadrant-1 {
     height: 100%;
@@ -301,6 +345,11 @@ footer {
     justify-content: center;
     margin: auto;
     align-items: flex-end;
+    @media screen and (max-width: $small) {
+        visibility: hidden;  
+        height: 0;    
+
+    }
 }
 
 .footer-quadrant-2 {
@@ -310,9 +359,9 @@ footer {
     align-content: space-around;
     padding-right: 59px;
     @media screen and (max-width: $small) {
-        grid-template-columns: 1fr;
+            visibility: hidden; 
+            height: 0;    
     }
-
 }
 
 .footer-column-1 {
@@ -336,8 +385,6 @@ footer {
     font-size: 15px;
     margin-top: 7px;
     color: B6B6B6;
-    display: none;
-    overflow: hidden;
 }
 
 .footer-list-split-column {
@@ -351,7 +398,14 @@ footer {
 hr {
     margin: 0;
     background-color: #d5d5d5;
-    width: 1px;
+    width:300px;
+}
+
+
+.footer-column-2 > hr {
+    margin: 0;
+    background-color: #d5d5d5;
+    width:250px;
 }
 
 /* ————————————————— */
@@ -411,11 +465,21 @@ hr {
     margin-left: -15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
     @media screen and (max-width: $small) {
         grid-template-columns: 1fr;
         width: 325px;
     }
     flex-direction: column;
+    position: relative;
+    
+}
+
+#close-gap-item {
+    margin-top: -340px;
+    @media screen and (max-width: $small) {
+        margin-top: 0px;
+    }
 }
 
 .main-column-1 {
@@ -428,13 +492,11 @@ img {
     max-width:100%;
 }
 
-.main-column-2 {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .grid-item {
     padding: 15px;
+    position: relative;
 }
 
 .screenshot {
@@ -452,6 +514,7 @@ img {
         transform: scale(1.05);
         cursor: pointer;
     }
+   
 }
 
 
